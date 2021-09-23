@@ -13,4 +13,22 @@ public class OverflowBin extends SortingBin {
         contents.add(toAdd);
         return 0;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder output = new StringBuilder();
+        output.append("Overflow contents: {");
+        for (int val:contents){
+            output.append(val);
+            output.append(", ");
+        }
+        output.append("}");
+
+        return output.toString();
+    }
+
+    @Override
+    public int getRemainingCapacity(){
+        return 0;
+    }
 }
